@@ -22,7 +22,7 @@ def get_summary( prompt, text):
             engine="text-davinci-003",
             prompt=prompt,
             temperature=0.0,
-            max_tokens=1024,
+            max_tokens=900,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0
@@ -103,7 +103,7 @@ if st.button("Process File"):
             if docx_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
                 raw_text = docx_to_txt(docx_file)
                 output = ''
-                chunks = textwrap.wrap(raw_text, 6000)
+                chunks = textwrap.wrap(raw_text, 6500)
                 result = ''
                 for chunk in chunks:
                     prompt1 = (f"Generate meeting minutes from the following Zoom transcript:\n{chunk}\n")
@@ -116,7 +116,7 @@ if st.button("Process File"):
             elif docx_file.type == "text/plain":
                 raw_text = str(docx_file.read(), "utf-8")
                 output = ''
-                chunks = textwrap.wrap(raw_text, 6000)
+                chunks = textwrap.wrap(raw_text, 6500)
                 result = ''
                 for chunk in chunks:
                     prompt1 = (f"Generate meeting minutes from the following Zoom transcript:\n{chunk}\n")
@@ -130,7 +130,7 @@ if st.button("Process File"):
                 raw_text = read_pdf(docx_file)
                 raw_text = docx_to_txt(docx_file)
                 output = ''
-                chunks = textwrap.wrap(raw_text, 6000)
+                chunks = textwrap.wrap(raw_text, 6500)
                 result = ''
                 for chunk in chunks:
                     prompt1 = (f"Generate meeting minutes from the following Zoom transcript:\n{chunk}\n")
