@@ -69,18 +69,16 @@ def read_pdf(file):
 
 st.title("AI Transcript Analyzer")
 st.markdown("""---""") 
-st.subheader("1. Please Enter you OpenAI API key - 000")
-url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
-api = st.text_input("If you don't know your OpenAI API key click [here](%s)." % url, type="password", placeholder="Your API Key")
+st.subheader("This space is reserved for OpenAI API input at in the future")
+#url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
+#api = st.text_input("If you don't know your OpenAI API key click [here](%s)." % url, type="password", placeholder="Your API Key")
 #st.write("If you don't know your OpenAI API key click [here](%s" % url)
 openai.api_key = "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"
 st.markdown("""---""") 
 st.subheader("2. Please Upload a the Transcipt")
 docx_file = st.file_uploader("Upload Document",
     type=["pdf","docx","txt"])
-#st.markdown("""---""") 
-#st.subheader("3. How many themes would like to the AI to look for?")
-#value = st.slider("", min_value=3 , max_value=6)
+
 
 # Check Openai Key
 if st.button("Process File"):
