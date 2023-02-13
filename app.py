@@ -121,7 +121,7 @@ if st.button("Process File"):
                     summary_large = get_summary(prompt1, chunk)
                     result = result + ' ' + summary_large
                 output = output + result
-                prompt_minutes = (f"Combine the information from multiple accounts of a MEETING into a single, coherent account. Consider all accounts to be equally credible and important. Start the account with a brief introduction to the meeting, then include the most relevant information from each account in a logical and coherent manner, resolving any contradictions or discrepancies as necessary. End the account with a brief summary of the most important outcomes of the meeting. MEETING: {output}")
+                prompt_minutes = (f"Write a single account of the MEETING. Consider all chunks to be equally credible and important. Start the account with a brief introduction to the meeting, then include the most relevant information from each account in a logical and coherent manner, resolving any contradictions or discrepancies as necessary. End the account with a brief summary of the most important outcomes of the meeting. MEETING: {output}")
                 output_minutes = get_minutes(prompt_minutes, output)
                 st.write(output_minutes)
             elif docx_file.type == "application/pdf":
