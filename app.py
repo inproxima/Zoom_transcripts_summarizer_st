@@ -6,7 +6,7 @@ import textwrap
 from PyPDF2 import PdfFileReader
 
 #page config
-st.set_page_config(page_title="Interview Analyzer", page_icon="🤖", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Zoom Transcript Summarizer", page_icon="🤖", initial_sidebar_state="expanded")
 hide_st_style = """
         <style>
         #MainMenu {visibility: hidden;}
@@ -67,7 +67,7 @@ def read_pdf(file):
 	return all_page_text
 
 
-st.title("AI Transcript Analyzer")
+st.title("Zoom Transcript Summarizer")
 st.markdown("""---""") 
 st.subheader("This space is reserved for OpenAI API input at in the future")
 #url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
