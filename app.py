@@ -70,10 +70,10 @@ def read_pdf(file):
 st.title("Zoom Transcript Summarizer")
 st.markdown("""---""") 
 st.subheader("This space is reserved for OpenAI API input at in the future")
-#url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
-#api = st.text_input("If you don't know your OpenAI API key click [here](%s)." % url, type="password", placeholder="Your API Key")
-#st.write("If you don't know your OpenAI API key click [here](%s" % url)
-openai.api_key = "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"
+url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
+api = st.text_input("If you don't know your OpenAI API key click [here](%s)." % url, type="password", placeholder="Your API Key")
+st.write("If you don't know your OpenAI API key click [here](%s" % url)
+openai.api_key = api
 st.markdown("""---""") 
 st.subheader("2. Please Upload a the Transcipt")
 docx_file = st.file_uploader("Upload Document",
